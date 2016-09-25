@@ -5,12 +5,11 @@ This is a derivative image that pulls from the official Jekyll image (based on A
 
 To run the container, follow these steps:
 
-docker pull pwbgl/jekyll-pygments
+docker pull pwbgl/docker-jekyll-pygments
 
 cd  /dir/with/jekyll-project
 
-docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll \
-  -it -p 127.0.0.1:4000:4000 pwbgl/jekyll-pygments
+docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll -it -p 127.0.0.1:4000:4000 pwbgl/docker-jekyll-pygments
 
 Then you can visit the site in the browser at  http://localhost:4000
 
