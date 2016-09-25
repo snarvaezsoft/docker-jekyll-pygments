@@ -9,4 +9,8 @@ RUN   apk update  &&  \
       apk add --no-cache libc-dev && \
       apk add --no-cache python  && \
       apk add --no-cache py-pygments && \
-      gem install pygments.rb
+      gem install pygments.rb && \
+      apk del ruby-dev && \
+      apk del make && \
+      apk del gcc && \
+      apk del libc-dev
